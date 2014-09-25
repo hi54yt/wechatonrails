@@ -1,0 +1,10 @@
+<MsgType><![CDATA[news]]></MsgType>
+<ArticleCount>1</ArticleCount>
+<Articles>
+    <item>
+        <Title><![CDATA[<%=@event.title%>]]></Title>
+        <Description><![CDATA[<%=@event.description%>]]></Description>
+        <PicUrl><![CDATA[<%=@event.picture%>]]></PicUrl>
+        <Url><![CDATA[<%=@event.url%>?wechat_id=<%= params[:xml][:FromUserName] %>]]></Url>
+    </item>
+</Articles>
