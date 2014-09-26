@@ -14,6 +14,10 @@ gem 'devise'
 gem 'devise_invitable'
 gem 'pundit'
 
+## XML parse
+gem 'nokogiri'
+gem 'actionpack-xml_parser'
+
 ## views
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'

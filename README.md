@@ -29,6 +29,11 @@ Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.
 Getting Started
 ---------------
 
+ngrok -subdomain=wechatr 3000
+
+
+
+
 Documentation and Support
 -------------------------
 

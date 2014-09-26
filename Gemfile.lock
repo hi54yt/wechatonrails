@@ -10,6 +10,8 @@ GEM
       activesupport (= 4.1.5)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
+    actionpack-xml_parser (1.0.1)
+      actionpack (>= 4.0.0.rc1)
     actionview (4.1.5)
       activesupport (= 4.1.5)
       builder (~> 3.1)
@@ -303,6 +305,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionpack-xml_parser
   better_errors
   binding_of_caller
   bootstrap-sass
@@ -328,6 +331,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   mysql2
+  nokogiri
   pry-rails
   pry-rescue
   pundit

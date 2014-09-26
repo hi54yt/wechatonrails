@@ -23,6 +23,12 @@ class Wechat::HomeController < Wechat::BaseController
     render text: 'works', content_type: 'text/plain'
   end
 
+  def users
+    a = get("user/get")
+
+    render text: 'works', content_type: 'text/plain'
+  end
+
   def menu
     # menu = YAML.load(File.new(menu_yaml).read)
     menu = YAML.load_file('config/menu.yml')
@@ -41,6 +47,10 @@ class Wechat::HomeController < Wechat::BaseController
 
   protected
 
+  def get path, headers={}
+    with_access_token(headers[:params]){|params| client.get path, headers.merge(params: params)}
+  end
+  
   ## menu
   def post path, payload, headers = {}
     api_base = 'https://api.weixin.qq.com/cgi-bin/'

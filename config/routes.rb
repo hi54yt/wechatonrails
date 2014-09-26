@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   namespace 'wechat' do
     root to: 'home#index'
 
-    get 'test', to: 'home#test'
-    get 'menu', to: 'home#menu'
+    get 'users',  to: 'home#users'
+    get 'test',   to: 'home#test'
+    get 'menu',   to: 'home#menu'
     get 'qrcode', to: 'home#qrcode'
 
     post '/', to: 'events#subscribe', constraints: Wechat::Constraint.new('subscribe')
@@ -23,10 +24,10 @@ Rails.application.routes.draw do
     post '/', to: 'images#input', constraints: Wechat::Constraint.new('image')
     post '/', to: 'locations#input', constraints: Wechat::Constraint.new('location')
     post '/', to: 'voices#input', constraints: Wechat::Constraint.new('voice')
-    post '/', to: 'wechat#input_music', constraints: Wechat::Constraint.new('music')
-    post '/', to: 'wechat#input_news', constraints: Wechat::Constraint.new('news')
-
-    post '/', to: 'wechat#input_news', constraints: lambda {|r| r.params}
+    # post '/', to: 'wechat#input_music', constraints: Wechat::Constraint.new('music')
+    # post '/', to: 'wechat#input_news', constraints: Wechat::Constraint.new('news')
+    #
+    # post '/', to: 'wechat#input_news', constraints: lambda {|r| r.params}
   end
 
   # Admin
