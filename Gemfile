@@ -14,6 +14,10 @@ gem 'devise'
 gem 'devise_invitable'
 gem 'pundit'
 
+
+## Http
+gem 'rest_client'
+
 ## XML parse
 gem 'nokogiri'
 gem 'actionpack-xml_parser'
@@ -34,7 +38,7 @@ gem 'upmin-admin'
 
 
 ## wechat
-# gem 'wechat-rails', git:'https://github.com/skinnyworm/wechat-rails'
+# gem 'wechat-rails', git:'https://github.com/lanvige/wechat-rails'
 
 
 

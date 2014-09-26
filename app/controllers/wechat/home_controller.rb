@@ -50,7 +50,7 @@ class Wechat::HomeController < Wechat::BaseController
   def get path, headers={}
     with_access_token(headers[:params]){|params| client.get path, headers.merge(params: params)}
   end
-  
+
   ## menu
   def post path, payload, headers = {}
     api_base = 'https://api.weixin.qq.com/cgi-bin/'

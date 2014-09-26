@@ -36,7 +36,9 @@ module Wechatr
     config.i18n.default_locale = 'zh-CN'
 
     # Auto load from lib
+    # config.autoload_paths += Dir["#{config.root}/lib/**/"]
+    # config.autoload_paths += %W(#{config.root}/lib)
+    # config.autoload_paths << Rails.root.join('lib')
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
-    config.autoload_paths += %W(#{config.root}/lib)
   end
 end
