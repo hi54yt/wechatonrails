@@ -12,9 +12,12 @@ class WechatsController < ApplicationController
     request.reply.text "help content" #回复帮助信息
   end
 
-
   # 处理图片信息
   on :image do |request|
+    a = '1'
+    tmp_file = requret.as 'image'
+    FileUtils.mv(tmp_file.path, "/var/tmp/1.jpg")
+
     request.reply.image(request[:MediaId]) #直接将图片返回给用户
   end
 end

@@ -81,12 +81,12 @@ module Wechat
 
     def video media_id, opts={}
       video_fields = camelize_hash_keys({media_id: media_id}.merge(opts.slice(:title, :description)))
-      update(:MsgType=>"video", :Video=>video_fields)
+      update(MsgType: "video", Video: video_fields)
     end
 
     def music thumb_media_id, music_url, opts={}
       music_fields = camelize_hash_keys(opts.slice(:title, :description, :HQ_music_url).merge(music_url: music_url, thumb_media_id: thumb_media_id))
-      update(:MsgType=>"music", :Music=>music_fields)
+      update(MsgType: "music", Music: music_fields)
     end
 
     def news collection, &block

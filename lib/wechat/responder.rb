@@ -14,13 +14,13 @@ module Wechat
 
       def on message_type, with: nil, respond: nil, &block
         raise "Unknow message type" unless message_type.in? [:text, :image, :voice, :video, :location, :link, :event, :fallback]
-        config=respond.nil? ? {} : {:respond=>respond}
-        config.merge!(:proc=>block) if block_given?
+        config = respond.nil? ? {} : {respond: respond}
+        config.merge!(proc: block) if block_given?
 
         if (with.present? && !message_type.in?([:text, :event]))
           raise "Only text and event message can take :with parameters"
         else
-          config.merge!(:with=>with) if with.present?
+          config.merge!(with: with) if with.present?
         end
 
         responders(message_type) << config
